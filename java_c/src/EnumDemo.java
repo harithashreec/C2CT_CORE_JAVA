@@ -1,13 +1,26 @@
+package java;
 
-public class EnumDemo {
-
-	public EnumDemo() {
-		// TODO Auto-generated constructor stub
+//public enum ENU {	
+	
+	enum Level{  
+	BEGINNER("B"),INTERMEDIATE("I"),ADVANCED("A");
+				private String abbr;
+		Level(String ab){
+			abbr = ab;
+		}                         
+		public String getAbbr(){
+			return abbr;
+		} 
+		
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+	
+	
+	
+	public class EnumDemo {
+	
+		public static void main(String[] args) {
+			Level l1 = Level.ADVANCED;
+			System.out.println(l1.ordinal());
+			System.out.println(l1.getAbbr());
 }
